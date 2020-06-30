@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.InterfaceFXMLController">
+   <children>
+      <MenuBar prefHeight="35.0" prefWidth="800.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="openFileButton" mnemonicParsing="false" onAction="#handleOpenFileAction" text="Open File" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane layoutY="35.0" prefHeight="586.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Matrizes">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="607.0" prefWidth="800.0">
+                     <children>
+                        <TextArea fx:id="rMatrixTextArea" editable="false" layoutX="58.0" layoutY="70.0" prefHeight="200.0" prefWidth="200.0" />
+                        <TextArea fx:id="gMatrixTextArea" editable="false" layoutX="290.0" layoutY="70.0" prefHeight="200.0" prefWidth="200.0" />
+                        <TextArea fx:id="bMatrixTextArea" editable="false" layoutX="519.0" layoutY="70.0" prefHeight="200.0" prefWidth="200.0" />
+                        <TextArea fx:id="rCompressedTextArea" editable="false" layoutX="90.0" layoutY="319.0" prefHeight="38.0" prefWidth="565.0" />
+                        <TextArea fx:id="gCompressedTextArea" editable="false" layoutX="90.0" layoutY="371.0" prefHeight="38.0" prefWidth="565.0" />
+                        <TextArea fx:id="bCompressedTextArea" editable="false" layoutX="90.0" layoutY="422.0" prefHeight="38.0" prefWidth="565.0" />
+                        <Label layoutX="56.0" layoutY="330.0" text="Red:" />
+                        <Label layoutX="45.0" layoutY="382.0" text="Green:" />
+                        <Label layoutX="53.0" layoutY="433.0" text="Blue:" />
+                        <Label layoutX="129.0" layoutY="31.0" text="Red Matrix" />
+                        <Label layoutX="366.0" layoutY="31.0" text="Green Matrix" />
+                        <Label layoutX="589.0" layoutY="31.0" text="Blue Matrix" />
+                        <Label layoutX="691.0" layoutY="293.0" text="Flag:" />
+                        <TextField fx:id="rFlag" editable="false" layoutX="684.0" layoutY="326.0" prefHeight="25.0" prefWidth="40.0" />
+                        <TextField fx:id="gFlag" editable="false" layoutX="684.0" layoutY="378.0" prefHeight="25.0" prefWidth="40.0" />
+                        <TextField fx:id="bFlag" editable="false" layoutX="684.0" layoutY="429.0" prefHeight="25.0" prefWidth="40.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Before/After">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="origImage" fitHeight="300.0" fitWidth="300.0" layoutX="50.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="finImage" fitHeight="300.0" fitWidth="300.0" layoutX="450.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="309.0" layoutY="412.0" text="Rácio:" />
+                        <Label layoutX="520.0" layoutY="363.0" text="Tamanho :" />
+                        <Label layoutX="105.0" layoutY="363.0" text="Tamanho:" />
+                        <TextArea fx:id="origImgTextArea" layoutX="161.0" layoutY="355.0" prefHeight="25.0" prefWidth="149.0" />
+                        <TextArea fx:id="finalImgTextArea" layoutX="581.0" layoutY="355.0" prefHeight="25.0" prefWidth="149.0" />
+                        <TextArea fx:id="racioValueTextArea" layoutX="347.0" layoutY="404.0" prefHeight="25.0" prefWidth="149.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
